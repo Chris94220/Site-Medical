@@ -188,7 +188,7 @@ h2 {
 }
 
 
-/*Page de rendez-vous*/
+
 
 /*Page de création*/
 
@@ -320,6 +320,16 @@ form button:hover {
 .form-group button:hover {
   background-color: #45a049;
 }
+
+/*Contact*/
+
+
+.card-icon {
+  font-size: 24px;
+  color: #007BFF; /* Couleur de l'icône */
+  margin-right: 15px;
+}
+
 
 
   /*FOOTER*/
