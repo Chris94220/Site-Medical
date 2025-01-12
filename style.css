@@ -333,16 +333,21 @@ form button:hover {
 
 
   /*FOOTER*/
-
+  :root {
+    
+    --footer-text-color: #b6b6b6;
+  }
 
   footer {
-    background-color: #fff;
+    background-color: var(--footer-bg-color);
     padding: 20px 40px;
     border-top: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--footer-text-color);
+    
+    
   }
 
   .footer-column {
