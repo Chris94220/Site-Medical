@@ -82,7 +82,7 @@
   }
 
   .auth .login {
-    background-color: #333;
+    background-color: #4CAF50;
     color: #fff;
  
   }
@@ -227,7 +227,7 @@ form input[type="password"] {
 }
 
 form button {
-  background-color: #333;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -238,9 +238,8 @@ form button {
 }
 
 form button:hover {
-  background-color: #555;
+  background-color: #4CAF50;
 }
-
 
 /*Page de connexion*/
 
@@ -280,7 +279,7 @@ form input[type="text"],
 }
 
 form button {
-  background-color: #333;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -291,7 +290,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #555;
+  background-color: #4CAF50;
 }
 
 /*RDV*/
