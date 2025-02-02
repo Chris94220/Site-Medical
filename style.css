@@ -83,7 +83,7 @@
   .auth .login {
     background-color: #4CAF50;
     color: #fff;
- 
+    
   }
 
   .main-content {
@@ -392,13 +392,30 @@ select, input[type="text"], input[type="number"], button {
 
 /*Lien*/
 
+#theme-toggle{
+  background-color: #1c201c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
 
 
-/* Style au survol des liens */
+
 a:hover {
   color: #2427b1; /* Nouvelle couleur au survol */
+  font-size: 1.1em;
   
 }
+
+.login a{
+  color: #ffffff;
+  font-size: 1em;
+  
+}
+
+
+
 
   /*FOOTER*/
   
@@ -436,6 +453,10 @@ a:hover {
     text-decoration: none;
     font-size: 14px;
   }
+
+
+
+  /*RESPONSIVE*/
 
   @media (max-width: 768px) {
     header {

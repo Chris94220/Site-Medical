@@ -18,6 +18,10 @@ themeToggleButton.addEventListener('click', () => {
   localStorage.setItem('theme', newTheme);
 });
 
+//heure et date du formulaire
+
+
+
 
 //validation du formulaire
 
@@ -40,14 +44,5 @@ document.addEventListener('DOMContentLoaded', function () { // Attendre que la p
       } else {
           paiementForm.style.display = 'none';  // ✅ Cache le formulaire
       }
-  });
-});
-
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-  const payerBtn = document.getElementById('payer-btn');
-
-  payerBtn.addEventListener('click', function() {
-      alert('Paiement en cours...');
   });
 });
