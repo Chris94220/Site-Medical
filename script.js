@@ -17,3 +17,37 @@ themeToggleButton.addEventListener('click', () => {
   document.documentElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
 });
+
+
+//validation du formulaire
+
+
+document.getElementById('monFormulaire').addEventListener('submit', function(event) {
+  event.preventDefault(); // Empêche le rechargement de la page
+  // Logique de traitement des données ici si nécessaire
+  window.location.href = 'paiement.html'; // Redirection après soumission
+});
+
+
+//formulaire de paiement
+document.addEventListener('DOMContentLoaded', function () { // Attendre que la page soit complètement chargée
+  const serviceSelect = document.getElementById('service');
+  const paiementForm = document.getElementById('paiement-form');
+
+  serviceSelect.addEventListener('change', function () {
+      if (serviceSelect.value === 'maintenant') {
+          paiementForm.style.display = 'block'; // ✅ Affiche le formulaire
+      } else {
+          paiementForm.style.display = 'none';  // ✅ Cache le formulaire
+      }
+  });
+});
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  const payerBtn = document.getElementById('payer-btn');
+
+  payerBtn.addEventListener('click', function() {
+      alert('Paiement en cours...');
+  });
+});

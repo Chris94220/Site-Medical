@@ -53,7 +53,6 @@
 
   nav a {
     text-decoration: none;
-    color: #6d6565;
     font-size: 16px;
   }
  
@@ -331,11 +330,78 @@ form button:hover {
 
 
 
+
+/*page de paiement */
+
+
+select, input[type="text"], input[type="number"], button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-group, #paiement-form {
+  margin-top: 15px;
+}
+select, input[type="text"], input[type="number"], button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+#paiement-form, #confirmation-message {
+  display: none; /* Masqué par défaut */
+}
+#confirmation-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#valider-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#valider-btn button:hover {
+  background-color: #0056b3;
+}
+
+
+.bouton-paiement {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.bouton-paiement:hover {
+  background-color: #0056b3; /* Effet au survol */
+}
+
+/*Lien*/
+
+
+
+/* Style au survol des liens */
+a:hover {
+  color: #2427b1; /* Nouvelle couleur au survol */
+  
+}
+
   /*FOOTER*/
-  :root {
-    
-    --footer-text-color: #b6b6b6;
-  }
+  
 
   footer {
     background-color: var(--footer-bg-color);
@@ -366,9 +432,8 @@ form button:hover {
     margin-bottom: 8px;
   }
 
-  .footer-column ul li a {
+  .footer-column ul li  {
     text-decoration: none;
-    color: #333;
     font-size: 14px;
   }
 

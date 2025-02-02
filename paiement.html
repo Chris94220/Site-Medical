@@ -8,7 +8,10 @@
    <link rel="icon" href="images/icon.png" type="image/x-icon">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   </head>
+
 <body>
+
+
   <header>
     <div class="logo">Mon Docteur</div>
     <nav>
@@ -21,53 +24,60 @@
       <button class="create-account"><a href="creer.html">Créer un compte</button></a> 
       <button class="login"><a href="connexion.html" >Connexion</button></a>
       <button id="theme-toggle">Changer de thème</button>
+
+      
     </div>
   </header>
 
-<div class="container">
-    <h1>A propos</h1>
-    <h2>Nos Spécialiste</h2>
+  <div class="container">
 
-    <div class="grid">
-      <div class="card">
-        <img src="images/generaliste.jpg" alt="gant de medecin">
-        <h3>Generaliste</h3>
-        <p>Offre des soins de santé primaires pour des pathologies courantes et assure le suivi global du patient.</p>
-      </div>
+  <main class="main-content">
+    <h1>Paiement</h1>
+    <p>Votre rendez-vous a été pris en compte merci de procéder au paiement maintenant ou le jour du rendez vous</p>
+  </main>
 
-      <div class="card">
-        <img src="images/pediatre.jpg" alt="un pediatre qui écoute le coeur d'une petite fille">
-        <h3>Pédiatre</h3>
-        <p>Spécialiste des soins de santé pour les enfants et les adolescents.</p>
-      </div>
+  <div class="form-group">
+    <label for="service">Je paie :</label>
+    <select id="service" name="service" required>
 
-      <div class="card">
-        <img src="images/famille.jpg" alt="un cabinet medical">
-        <h3>Medecin de famille</h3>
-        <p>Soins primaires pour tous les membres de la famille, quel que soit leur âge..</p>
-      </div>
+        <option value="" disabled selected hidden>Faites votre choix</option>
+        <option value="maintenant">Maintenant</option>
+        <option value="rdv">Le jour du rendez-vous</option>
+    </select>
+</div>
 
-      <div class="card">
-        <img src="images/cardiologue.jpg" alt="une serringue avec un coeur en papier en arrière plan">
-        <h3>Cardiologue</h3>
-        <p>Spécialiste des maladies du cœur et du système cardiovasculaire.</p>
-      </div>
+<button id="valider-btn" href="">Valider</button>
 
-      <div class="card">
-        <img src="images/poumon.jpg" alt="une radio de poumon">
-        <h3>Pneumologue</h3>
-        <p>Spécialiste des maladies des poumons et des voies respiratoires.</p>
-      </div>
 
-      <div class="card">
-        <img src="images/neuro.jpg" alt="plusieur radio de cerveaux">
-        <h3>Neurologue</h3>
-        <p>Expert des troubles du système nerveux, comme l'épilepsie ou la sclérose en plaques.</p>
-      </div>
-    </div>
+
+<div id="paiement-form">
+
+    <h3>Informations de Paiement</h3>
+    <label>Nom sur la carte :</label>
+    <input type="text" placeholder="Votre nom complet" required>
+
+    <label>Numéro de carte :</label>
+    <input type="number" placeholder="1234 5678 9012 3456" required>
+
+    <label>Date d'expiration :</label>
+    <input type="text" placeholder="MM/AA" required>
+
+    <label>Code CVV :</label>
+    <input type="number" placeholder="123" required>
+
+    <button type="submit" class="bouton-paiement">Payer Maintenant</button>
+</div>
+</div>
+
+
+
+
+
+
+
+
   </div>
 
-  
   <footer>
  
     <div class="footer-column">
@@ -87,6 +97,7 @@
       </ul>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
