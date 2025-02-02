@@ -36,38 +36,40 @@
     <p>Votre rendez-vous a été pris en compte merci de procéder au paiement maintenant ou le jour du rendez vous</p>
   </main>
 
-  <div class="form-group">
-    <label for="service">Je paie :</label>
-    <select id="service" name="service" required>
-
-        <option value="" disabled selected hidden>Faites votre choix</option>
-        <option value="maintenant">Maintenant</option>
-        <option value="rdv">Le jour du rendez-vous</option>
-    </select>
-</div>
-
-<button id="valider-btn" href="">Valider</button>
 
 
 
-<div id="paiement-form">
 
-    <h3>Informations de Paiement</h3>
-    <label>Nom sur la carte :</label>
-    <input type="text" placeholder="Votre nom complet" required>
+  <form id="payment-form">
+    <div class="form-group">
+        <label for="service">Je paie :</label>
+        <select id="service" name="service" required>
+            <option value="" disabled selected hidden>Faites votre choix</option>
+            <option value="maintenant">Maintenant</option>
+            <option value="rdv">Le jour du rendez-vous</option>
+        </select>
+    </div>
 
-    <label>Numéro de carte :</label>
-    <input type="number" placeholder="1234 5678 9012 3456" required>
+    <!-- Formulaire de paiement, caché par défaut -->
+    <div id="paiement-form" style="display: none;">
+        <h3>Informations de Paiement</h3>
+        <label for="nom">Nom sur la carte :</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
 
-    <label>Date d'expiration :</label>
-    <input type="text" placeholder="MM/AA" required>
+        <label for="num-carte">Numéro de carte :</label>
+        <input type="text" id="num-carte" name="num-carte" placeholder="1234 5678 9012 3456" required>
 
-    <label>Code CVV :</label>
-    <input type="number" placeholder="123" required>
+        <label for="expiration">Date d'expiration :</label>
+        <input type="text" id="expiration" name="expiration" placeholder="MM/AA" required>
 
-    <button type="submit" class="bouton-paiement">Payer Maintenant</button>
-</div>
-</div>
+        <label for="cvv">Code CVV :</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+        <button type="submit">Payer Maintenant</button>
+    </div>
+
+    <button id="valider-btn" type="submit">Valider</button>
+</form>
 
 
 

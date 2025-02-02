@@ -18,8 +18,6 @@ themeToggleButton.addEventListener('click', () => {
   localStorage.setItem('theme', newTheme);
 });
 
-//heure et date du formulaire
-
 
 
 
@@ -33,16 +31,30 @@ document.getElementById('monFormulaire').addEventListener('submit', function(eve
 });
 
 
-//formulaire de paiement
-document.addEventListener('DOMContentLoaded', function () { // Attendre que la page soit complètement chargée
-  const serviceSelect = document.getElementById('service');
-  const paiementForm = document.getElementById('paiement-form');
+//formulaire de rendez vous
+document.getElementById('service').addEventListener('change', function() {
+  const commentaireDiv = document.getElementById('commentaire');
+  const service = this.value;
 
-  serviceSelect.addEventListener('change', function () {
-      if (serviceSelect.value === 'maintenant') {
-          paiementForm.style.display = 'block'; // ✅ Affiche le formulaire
+  // Afficher ou masquer la zone de commentaire en fonction du choix
+  if (service === 'autre') {
+      commentaireDiv.style.display = 'block'; // Affiche la zone de commentaire
+  } else {
+      commentaireDiv.style.display = 'none';  // Cache la zone de commentaire
+  }
+});
+
+//formulaire de paiement
+
+    // Écouteur d'événement sur le changement de sélection
+    document.getElementById('service').addEventListener('change', function() {
+      const paiementForm = document.getElementById('paiement-form');
+      const service = this.value;
+
+      // Si l'utilisateur choisit "Maintenant", afficher le formulaire de paiement
+      if (service === 'maintenant') {
+          paiementForm.style.display = 'block';
       } else {
-          paiementForm.style.display = 'none';  // ✅ Cache le formulaire
+          paiementForm.style.display = 'none';
       }
   });
-});
