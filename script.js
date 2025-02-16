@@ -24,6 +24,7 @@ themeToggleButton.addEventListener('click', () => {
 //validation du formulaire
 
 
+   
 
 
 
@@ -32,11 +33,11 @@ document.getElementById('service').addEventListener('change', function() {
   const commentaireDiv = document.getElementById('commentaire');
   const service = this.value;
 
-  // Afficher ou masquer la zone de commentaire en fonction du choix
+  
   if (service === 'autre') {
-      commentaireDiv.style.display = 'block'; // Affiche la zone de commentaire
+      commentaireDiv.style.display = 'block'; 
   } else {
-      commentaireDiv.style.display = 'none';  // Cache la zone de commentaire
+      commentaireDiv.style.display = 'none';  
   }
 });
 
@@ -63,3 +64,11 @@ paiementInputs.forEach(input => {
       document.getElementById('valider-btn').disabled = !allFilled;
   });
 });
+
+
+document.getElementById('monFormulaire').addEventListener('submit', function (e) {
+  e.preventDefault();
+  // Ici, vous pouvez éventuellement valider les données avant de continuer
+  window.location.href = 'paiement.html';
+});
+
