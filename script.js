@@ -24,11 +24,7 @@ themeToggleButton.addEventListener('click', () => {
 //validation du formulaire
 
 
-document.getElementById('monFormulaire').addEventListener('submit', function(event) {
-  event.preventDefault(); // Empêche le rechargement de la page
-  // Logique de traitement des données ici si nécessaire
-  window.location.href = 'paiement.html'; // Redirection après soumission
-});
+
 
 
 //formulaire de rendez vous
@@ -46,15 +42,24 @@ document.getElementById('service').addEventListener('change', function() {
 
 //formulaire de paiement
 
-    // Écouteur d'événement sur le changement de sélection
-    document.getElementById('service').addEventListener('change', function() {
-      const paiementForm = document.getElementById('paiement-form');
-      const service = this.value;
+document.getElementById('service').addEventListener('change', function () {
+  const paiementForm = document.getElementById('paiement-form');
+  const validerBtn = document.getElementById('valider-btn');
 
-      // Si l'utilisateur choisit "Maintenant", afficher le formulaire de paiement
-      if (service === 'maintenant') {
-          paiementForm.style.display = 'block';
-      } else {
-          paiementForm.style.display = 'none';
-      }
+  if (this.value === 'maintenant') {
+      paiementForm.style.display = 'block';
+      validerBtn.disabled = true;
+  } else {
+      paiementForm.style.display = 'none';
+      validerBtn.disabled = false;
+  }
+});
+
+// Activer le bouton "Valider" uniquement si le formulaire est correctement rempli
+const paiementInputs = document.querySelectorAll('#paiement-form input');
+paiementInputs.forEach(input => {
+  input.addEventListener('input', () => {
+      const allFilled = Array.from(paiementInputs).every(field => field.value.trim() !== '');
+      document.getElementById('valider-btn').disabled = !allFilled;
   });
+});

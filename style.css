@@ -107,22 +107,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 20px;
   }
 
-  .image-placeholder {
-    width: 40%;
-    height: 300px;
-    background-color: #eaeaea;
+  .image-and-text {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-  }
-  .image-placeholder img {
-    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.image-placeholder img {
+    max-width: 40%; 
     height: auto;
-  }
+    border-radius: 10px;
+    margin-bottom: 20px; 
+}
   .text-section {
     width: 40%;
     text-align: left;
@@ -159,24 +160,27 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px; 
+  max-width: 1000px; 
 }
 
 .card {
   border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 10px; 
+  padding: 30px; 
   text-align: center;
+  font-size: 1.2em; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .card img {
   max-width: 100%;
-  height: 150px;
+  height: 200px; 
   background: #f4f4f4;
-  margin-bottom: 15px;
+  margin-bottom: 20px; 
+  border-radius: 5px;
 }
-
 .card h3 {
   font-size: 1.2em;
   margin-bottom: 10px;
@@ -365,18 +369,24 @@ button {
 }
 
 #valider-btn {
-  background-color: #007bff;
+  background-color: #28a745;
   color: white;
   border: none;
-  cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-#valider-btn button:hover {
-  background-color: #0056b3;
+#valider-btn:hover:enabled {
+  background-color: #218838;
 }
 
+#valider-btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
 
 .bouton-paiement {
   background-color: #007bff;
