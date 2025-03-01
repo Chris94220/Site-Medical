@@ -1,193 +1,226 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+
   
-    
-  }
+}
 
-  :root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-  }
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit; 
+}
+
+.auth {
+  display: flex;
+  gap: 10px;
+}
+
+.auth button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth .create-account {
+  background-color: #f0f0f0;
+  color: #333;
+
+}
+
+.auth .login {
+  background-color: #4CAF50;
+  color: #fff;
   
-  [data-theme="dark"] {
-    --background-color: #000000;
-    --text-color: #ffffff;
-  }
+}
 
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-    background-color: var(--background-color);
-    color: var(--text-color);
+.main-content {
+  padding: 40px;
+  text-align: center;
+}
 
-  }
+.main-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-  header {
-    background-color: #fff;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
+.main-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
 
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-  }
+.image-and-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
 
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-
-  nav a {
-    text-decoration: none;
-    font-size: 16px;
-  }
- 
-  a{
-    text-decoration: none;
-    color: inherit; 
-  }
- 
-  .auth {
-    display: flex;
-    gap: 10px;
-  }
-
-  .auth button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-
-  .auth .create-account {
-    background-color: #f0f0f0;
-    color: #333;
-
-  }
-
-  .auth .login {
-    background-color: #4CAF50;
-    color: #fff;
-    
-  }
-
-  .main-content {
-    padding: 40px;
-    text-align: center;
-  }
-
-  .main-content h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .main-content p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
-  }
-
-  .image-and-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
-  }
-
-  .image-and-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px; 
+.image-and-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px; 
 }
 
 .image-placeholder img {
-    max-width: 40%; 
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px; 
+  max-width: 40%; 
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px; 
 }
-  .text-section {
-    width: 40%;
-    text-align: left;
-  }
+.text-section {
+  width: 40%;
+  text-align: left;
+}
 
-  .text-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+.text-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-  .text-section p {
-    font-size: 16px;
-    color: #666;
-  }
+.text-section p {
+  font-size: 16px;
+  color: #666;
+}
 
 
 /*Page a propos */
 
 .container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 20px;
+max-width: 1200px;
+margin: 20px auto;
+padding: 0 20px;
 }
 
 h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+font-size: 2em;
+margin-bottom: 10px;
 }
 
 h2 {
-  color: #888;
-  margin-bottom: 20px;
+color: #888;
+margin-bottom: 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: 30px; 
-  max-width: 1000px; 
+
+
+.grid{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+gap: 30px; 
+max-width: 1000px; 
 }
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 10px; 
-  padding: 30px; 
-  text-align: center;
-  font-size: 1.2em; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+border: 1px solid #ddd;
+border-radius: 10px; 
+padding: 30px; 
+text-align: center;
+font-size: 1.2em; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .card img {
-  max-width: 100%;
-  height: 200px; 
-  background: #f4f4f4;
-  margin-bottom: 20px; 
-  border-radius: 5px;
+
+background: #f4f4f4;
+margin-bottom: 20px; 
+border-radius: 5px;
+}
+
+
+
+
+/*grid about*/
+
+.grid-about {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+gap: 30px; 
+max-width: 1000px; 
+}
+
+.card-about {
+height: 500px;
+width: 500px;
+border: 1px solid #ddd;
+border-radius: 10px; 
+padding: 30px; 
+text-align: center;
+font-size: 1.2em; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.card-about img {
+width: 350px;
+height: 300px; 
+background: #f4f4f4;
+margin-bottom: 20px; 
+border-radius: 5px;
 }
 .card h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+font-size: 1.2em;
+margin-bottom: 10px;
 }
 
 .card p {
-  color: #555;
+color: #555;
 }
 
 
@@ -196,146 +229,146 @@ h2 {
 /*Page de création*/
 
 form h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
+margin-bottom: 20px;
+font-size: 24px;
 }
 
 form label {
-  display: block;
-  text-align: left;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #666;
+display: block;
+text-align: left;
+margin-bottom: 5px;
+font-size: 14px;
+color: #666;
 }
 
 form input[type="email"],
 form input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 14px;
 }
 
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  margin-bottom: 10px;
+display: flex;
+align-items: center;
+justify-content: left;
+margin-bottom: 10px;
 }
 
 .checkbox-container input {
-  margin-right: 10px;
+margin-right: 10px;
 }
 
 form button {
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  width: 100%;
+background-color: #4CAF50;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+font-size: 14px;
+cursor: pointer;
+width: 100%;
 }
 
 form button:hover {
-  background-color: #4CAF50;
+background-color: #4CAF50;
 }
 
 /*Page de connexion*/
 
 form h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
+margin-bottom: 20px;
+font-size: 24px;
 }
 
 form label {
-  display: block;
-  text-align: left;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #666;
+display: block;
+text-align: left;
+margin-bottom: 5px;
+font-size: 14px;
+color: #666;
 }
 
 form input[type="email"],
 form input[type="text"],
-  form input[type="date"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
+form input[type="date"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 14px;
 }
 
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  margin-bottom: 10px;
+display: flex;
+align-items: center;
+justify-content: left;
+margin-bottom: 10px;
 }
 
 .checkbox-container input {
-  margin-right: 10px;
+margin-right: 10px;
 }
 
 form button {
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  width: 100%;
+background-color: #4CAF50;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+font-size: 14px;
+cursor: pointer;
+width: 100%;
 }
 
 form button:hover {
-  background-color: #4CAF50;
+background-color: #4CAF50;
 }
 
 /*RDV*/
 
 .form-group {
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
 }
 .form-group input, .form-group select, .form-group button {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
 }
 .form-group button {
-  background-color: #4CAF50;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
+background-color: #4CAF50;
+color: white;
+font-weight: bold;
+cursor: pointer;
+border: none;
 }
 .form-group button:hover {
-  background-color: #45a049;
+background-color: #45a049;
 }
 
 input, select, textarea {
-  width: 100%; /* Définit la largeur des champs pour qu'ils soient tous identiques */
-  padding: 8px;  /* Ajoute un peu de padding pour l'aspect visuel */
-  box-sizing: border-box; /* Assure que le padding et la bordure sont inclus dans la largeur */
+width: 100%; /* Définit la largeur des champs pour qu'ils soient tous identiques */
+padding: 8px;  /* Ajoute un peu de padding pour l'aspect visuel */
+box-sizing: border-box; /* Assure que le padding et la bordure sont inclus dans la largeur */
 }
 
 /*Contact*/
 
 
 .card-icon {
-  font-size: 24px;
-  color: #007BFF; /* Couleur de l'icône */
-  margin-right: 15px;
+font-size: 24px;
+color: #007BFF; /* Couleur de l'icône */
+margin-right: 15px;
 }
 
 
@@ -345,171 +378,177 @@ input, select, textarea {
 
 
 .form-group {
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 input, select {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+width: 100%;
+padding: 8px;
+box-sizing: border-box;
 }
 
 /* Style du formulaire de paiement */
 #paiement-form {
-  margin-top: 20px;
+margin-top: 20px;
 }
 
 button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  margin-top: 10px;
+background-color: #007bff;
+color: white;
+border: none;
+cursor: pointer;
+padding: 10px;
+margin-top: 10px;
 }
 
 #valider-btn {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+background-color: #28a745;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
 }
 
 #valider-btn:hover:enabled {
-  background-color: #218838;
+background-color: #218838;
 }
 
 #valider-btn:disabled {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
+background-color: #ccc;
+color: #666;
+cursor: not-allowed;
 }
 
 .bouton-paiement {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
+background-color: #007bff;
+color: white;
+border: none;
+cursor: pointer;
+padding: 10px 20px;
+border-radius: 5px;
 }
 
 .bouton-paiement:hover {
-  background-color: #0056b3; /* Effet au survol */
+background-color: #0056b3; /* Effet au survol */
 }
 
 /*Lien*/
 
 #theme-toggle{
-  background-color: #1c201c;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
+background-color: #1c201c;
+color: white;
+font-weight: bold;
+cursor: pointer;
+border: none;
 }
 
 
 
 a:hover {
-  color: #2427b1; /* Nouvelle couleur au survol */
-  font-size: 1.1em;
-  
+color: #2427b1; /* Nouvelle couleur au survol */
+font-size: 1.1em;
+
 }
 
 .login a{
-  color: #ffffff;
-  font-size: 1em;
-  
+color: #ffffff;
+font-size: 1em;
+
 }
 
 
 
 
-  /*FOOTER*/
+/*FOOTER*/
+
+
+footer {
+  background-color: var(--footer-bg-color);
+  padding: 20px 40px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  color: var(--footer-text-color);
   
+  
+}
+
+.footer-column {
+  width: 30%;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li  {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .image-and-text {
+    flex-direction: column;
+  }
+
+  .image-placeholder, .text-section {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Une seule colonne */
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  .grid-about {
+    grid-template-columns: 1fr; /* Une seule colonne */
+    }
+    
+   
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .auth button {
+    width: 100%; /* Les boutons prennent toute la largeur */
+  }
+
+  .filters, .products {
+    grid-template-columns: 1fr; /* Ajustement pour les petits écrans */
+  }
 
   footer {
-    background-color: var(--footer-bg-color);
-    padding: 20px 40px;
-    border-top: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--background-color);
-    color: var(--footer-text-color);
-    
-    
+    flex-direction: column;
+    gap: 20px;
   }
-
-  .footer-column {
-    width: 30%;
-  }
-
-  .footer-column h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .footer-column ul {
-    list-style: none;
-  }
-
-  .footer-column ul li {
-    margin-bottom: 8px;
-  }
-
-  .footer-column ul li  {
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-
-
-  /*RESPONSIVE*/
-
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-  
-    .image-and-text {
-      flex-direction: column;
-    }
-  
-    .image-placeholder, .text-section {
-      width: 100%;
-    }
-  
-    .grid {
-      grid-template-columns: 1fr; /* Une seule colonne */
-    }
-  
-    nav {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    body {
-      padding: 10px;
-    }
-  
-    .auth button {
-      width: 100%; /* Les boutons prennent toute la largeur */
-    }
-  
-    .filters, .products {
-      grid-template-columns: 1fr; /* Ajustement pour les petits écrans */
-    }
-  
-    footer {
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
-  
+}
