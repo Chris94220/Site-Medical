@@ -257,13 +257,15 @@ font-size: 14px;
 .checkbox-container {
 display: flex;
 align-items: center;
-justify-content: left;
-margin-bottom: 10px;
 }
 
-.checkbox-container input {
-margin-right: 10px;
+#terms {
+  align-items: left;
+  width: 20px;
+  margin-bottom: 15px;
 }
+
+
 
 form button {
 background-color: #4CAF50;
@@ -306,16 +308,7 @@ border-radius: 4px;
 font-size: 14px;
 }
 
-.checkbox-container {
-display: flex;
-align-items: center;
-justify-content: left;
-margin-bottom: 10px;
-}
 
-.checkbox-container input {
-margin-right: 10px;
-}
 
 form button {
 background-color: #4CAF50;
@@ -510,41 +503,42 @@ footer {
 
 /*RESPONSIVE*/
 
+/* RESPONSIVE DESIGN */
+
+/* Tablettes et petits écrans (max 768px) */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
   }
 
   .image-and-text {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .image-placeholder, .text-section {
     width: 100%;
   }
 
-  .grid {
+  .grid, .grid-about {
     grid-template-columns: 1fr; /* Une seule colonne */
   }
 
   nav {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    text-align: center;
   }
-
-
-  .grid-about {
-    grid-template-columns: 1fr; /* Une seule colonne */
-    }
-    
-   
 }
 
+/* Smartphones (max 480px) */
 @media (max-width: 480px) {
   body {
-    padding: 10px;
+    padding: 15px;
   }
 
   .auth button {
@@ -552,11 +546,15 @@ footer {
   }
 
   .filters, .products {
-    grid-template-columns: 1fr; /* Ajustement pour les petits écrans */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   footer {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
   }
 }
+
